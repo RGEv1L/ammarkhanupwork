@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akhan-arch.pages.dev/sitemap.xml
+Sitemap: https://akhan-arcx.pages.dev/sitemap.xml
