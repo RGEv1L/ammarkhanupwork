@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wellbore Schematics Application — Ammar Khan</title>
+  <meta name="description" content="A Snowflake-based application delivering interactive 2D and 3D wellbore schematics over drilling data, with component and historical context.">
+  <link rel="canonical" href="https://ammarkhanupwork.pages.dev/work/wellbore-schematics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ammarkhanupwork.pages.dev/work/wellbore-schematics.html">
+  <meta property="og:title" content="Wellbore Schematics Application — Ammar Khan">
+  <meta property="og:description" content="Interactive 2D/3D wellbore visuals over drilling data, with component detail and historical context.">
+  <meta property="og:image" content="https://ammarkhanupwork.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · Warehouse · Oil &amp; gas</p>
+        <h1>Wellbore schematics application</h1>
+        <p class="lede">Turning rows of drilling data into interactive 2D and 3D pictures of what's actually downhole.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>Everything engineers needed to know about a wellbore — casing, tubing, components, workover history — existed in the drilling system's tables. But rows and columns are a hard way to reason about a physical structure thousands of feet deep. Understanding a well's current configuration or its history meant stitching together records by hand, and that knowledge stayed with whoever did the stitching.</p>
+
+      <h2>Approach</h2>
+      <p>I worked on the development and project management of a Snowflake-based application built over WellView source data. The application renders detailed wellbore schematics as interactive 2D and 3D visuals: the objects and components attached to each wellbore, positioned as they are downhole, with the historical context of how the well got to its current state.</p>
+      <p>The data model consolidates component and event records in Snowflake into structures the visualization layer can render directly, so the schematic always reflects the source system rather than a manually maintained drawing. Throughout delivery I communicated with stakeholders to keep the implementation aligned with business and operational requirements — the people who would actually use the schematics shaped what they show.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+        <svg viewBox="0 0 640 168" role="img" aria-label="WellView drilling data is modeled in Snowflake and rendered by an application delivering interactive 2D and 3D wellbore schematics with component and history detail">
+          <defs>
+            <marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker>
+            <marker id="arg" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#93A9BD"/></marker>
+          </defs>
+
+          <rect x="16" y="52" width="118" height="44" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="75" y="71" text-anchor="middle" class="svg-box-text">WellView</text>
+          <text x="75" y="87" text-anchor="middle" class="svg-box-text-sm">drilling &amp; completions</text>
+
+          <path d="M134 74 H166" fill="none" stroke="#93A9BD" stroke-width="1.5" marker-end="url(#arg)"/>
+
+          <rect x="170" y="52" width="128" height="44" rx="6" fill="#12314F"/>
+          <text x="234" y="71" text-anchor="middle" class="svg-white-text">Wellbore model</text>
+          <text x="234" y="87" text-anchor="middle" class="svg-white-text-sm">Snowflake</text>
+
+          <path d="M298 74 H330" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="334" y="30" width="150" height="108" rx="6" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="409" y="52" text-anchor="middle" class="svg-amber-text">Schematics app</text>
+          <rect x="348" y="62" width="56" height="26" rx="4" fill="#FFFFFF" stroke="#E2A63C"/>
+          <text x="376" y="79" text-anchor="middle" class="svg-box-text-sm">2D view</text>
+          <rect x="412" y="62" width="56" height="26" rx="4" fill="#FFFFFF" stroke="#E2A63C"/>
+          <text x="440" y="79" text-anchor="middle" class="svg-box-text-sm">3D view</text>
+          <text x="409" y="110" text-anchor="middle" class="svg-box-text-sm">components · history</text>
+          <text x="409" y="126" text-anchor="middle" class="svg-box-text-sm">interactive drill-down</text>
+
+          <path d="M484 84 H516" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="520" y="62" width="100" height="44" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="570" y="81" text-anchor="middle" class="svg-box-text">Engineers &amp;</text>
+          <text x="570" y="97" text-anchor="middle" class="svg-box-text">operations</text>
+
+          <path d="M560 12 L570 -2 L580 12 M563 8 H577 M570 -2 V12" fill="none" stroke="#4A6D8C" stroke-width="1.2" transform="translate(-536,132)"/>
+          <text x="48" y="152" class="svg-label">Downhole, visualized</text>
+        </svg>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>Engineers can open a well and see it — components in place, history attached, in two or three dimensions — instead of reconstructing it from tables. The schematic is generated from governed Snowflake data, so it stays current with the source system, and it's become the visually striking anchor piece of the reporting estate it belongs to.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li>Snowflake</li><li>WellView</li><li>2D/3D visualization</li><li>Data modeling</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/land-data-stack.html">← Previous: Land data stack</a>
+        <a href="/work/ai-knowledge-platform.html">Next: AI knowledge platform →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

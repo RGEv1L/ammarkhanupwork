@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Land Data Stack — Ammar Khan</title>
+  <meta name="description" content="A complex land-entity cross-reference system built with minimal source documentation, using Python-based AI lineage tracing to reverse-engineer data relationships.">
+  <link rel="canonical" href="https://ammarkhanupwork.pages.dev/work/land-data-stack.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ammarkhanupwork.pages.dev/work/land-data-stack.html">
+  <meta property="og:title" content="Land Data Stack — Ammar Khan">
+  <meta property="og:description" content="Reverse-engineering undocumented land data relationships with Python-based AI lineage tracing, through to Snowflake reporting views.">
+  <meta property="og:image" content="https://ammarkhanupwork.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · Warehouse · AI · Oil &amp; gas</p>
+        <h1>Land data stack</h1>
+        <p class="lede">Reverse-engineering a land system nobody could fully explain — and turning it into reporting views people trust.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>Land data is where energy reporting projects go to stall. Leases, tracts, agreements, and interests reference each other across systems in ways that only make sense if someone documented them — and here, almost nobody had. The client needed a cross-reference system for land entities, but the source system offered limited insight and very little documentation to build from. The relationships had to be discovered before they could be modeled.</p>
+
+      <h2>Approach</h2>
+      <p>Rather than interviewing my way through every undocumented join, I built Python-based AI lineage tracing to analyze the source data itself — profiling entities, testing candidate relationships, and reverse-engineering how land records actually connected in practice. The discovered lineage became the blueprint for the design.</p>
+      <p>On top of that foundation I architected and developed the land-entity cross-reference system in Snowflake, carrying it through to the reporting views the business consumes. I stayed on after development to maintain the stack — supporting reliability, reporting accuracy, and ongoing enhancement as the land organization's needs evolved.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+        <svg viewBox="0 0 640 150" role="img" aria-label="A sparsely documented land source system is analyzed by Python-based AI lineage tracing, which informs a land entity cross-reference model in Snowflake feeding land reporting views">
+          <defs>
+            <marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker>
+            <marker id="arg" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#93A9BD"/></marker>
+          </defs>
+
+          <rect x="16" y="46" width="118" height="44" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="75" y="65" text-anchor="middle" class="svg-box-text">Land source system</text>
+          <text x="75" y="81" text-anchor="middle" class="svg-box-text-sm">minimal documentation</text>
+
+          <path d="M134 68 H166" fill="none" stroke="#93A9BD" stroke-width="1.5" marker-end="url(#arg)"/>
+
+          <rect x="170" y="46" width="128" height="44" rx="4" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="234" y="65" text-anchor="middle" class="svg-amber-text">AI lineage tracing</text>
+          <text x="234" y="81" text-anchor="middle" class="svg-box-text-sm">Python · discovery</text>
+
+          <path d="M298 68 H330" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="334" y="46" width="128" height="44" rx="6" fill="#12314F"/>
+          <text x="398" y="65" text-anchor="middle" class="svg-white-text">Land Xref model</text>
+          <text x="398" y="81" text-anchor="middle" class="svg-white-text-sm">Snowflake</text>
+
+          <path d="M462 68 H494" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="498" y="46" width="120" height="44" rx="4" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="558" y="65" text-anchor="middle" class="svg-amber-text">Reporting views</text>
+          <text x="558" y="81" text-anchor="middle" class="svg-box-text-sm">land reporting</text>
+
+          <circle cx="170" cy="126" r="3" fill="#4A6D8C"/><text x="180" y="130" class="svg-label">Discover</text>
+          <path d="M242 126 H300" stroke="#C6D3DF" stroke-width="1.5"/>
+          <circle cx="308" cy="126" r="3" fill="#4A6D8C"/><text x="318" y="130" class="svg-label">Model</text>
+          <path d="M368 126 H426" stroke="#C6D3DF" stroke-width="1.5"/>
+          <circle cx="434" cy="126" r="3" fill="#E9930C"/><text x="444" y="130" class="svg-label">Maintain &amp; enhance</text>
+        </svg>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>The land organization got a cross-reference system grounded in how its data actually behaves, not how anyone assumed it should. Relationships that once lived in a handful of heads are now encoded in the model itself, and land reporting runs on views with a maintained, documented foundation underneath them.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li>Snowflake</li><li>Python</li><li>AI lineage tracing</li><li>Land data</li><li>Reporting views</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/snowflake-migration.html">← Previous: Warehouse migration</a>
+        <a href="/work/wellbore-schematics.html">Next: Wellbore schematics →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

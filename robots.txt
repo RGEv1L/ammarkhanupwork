@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ammarkhanupwork.pages.dev/sitemap.xml

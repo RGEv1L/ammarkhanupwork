@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Master Data &amp; Xref Architecture — Ammar Khan</title>
+  <meta name="description" content="End-to-end cross-reference integration and Well Master / Property Master reporting foundations across a large Snowflake estate.">
+  <link rel="canonical" href="https://ammarkhanupwork.pages.dev/work/master-data-xref.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ammarkhanupwork.pages.dev/work/master-data-xref.html">
+  <meta property="og:title" content="Master Data &amp; Xref Architecture — Ammar Khan">
+  <meta property="og:description" content="Unified well and property foundations across a Snowflake estate, extending a commercial MDM product where it fell short.">
+  <meta property="og:image" content="https://ammarkhanupwork.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · Warehouse · Oil &amp; gas</p>
+        <h1>Master data &amp; cross-reference architecture</h1>
+        <p class="lede">One well, one property, one answer — no matter which source system you ask.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>Across an upstream operator's systems — accounting, production, land — the same well or property was represented differently: different identifiers, different hierarchies, different spellings. Reports built on different sources wouldn't tie out, and a commercial MDM product covered only part of the estate. Anyone who has tried to reconcile a PROPNUM against a well identifier from another system knows exactly how this feels.</p>
+
+      <h2>Approach</h2>
+      <p>I built the end-to-end cross-reference (Xref) integration across a large Snowflake estate, establishing Well Master and Property Master reporting foundations as the single spine that every downstream subsystem could join to. Where the commercial MDM product (EnerHub) fell short, I added an architecture and development layer over it to incorporate the resources it was missing, rather than fighting the product or replacing it.</p>
+      <p>The work extended through master-data alignment and reporting requirements: unified property views for consistent property-level reporting, and well-master views that downstream production, land, and finance reporting could all trust as the authoritative mapping.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+        <svg viewBox="0 0 640 190" role="img" aria-label="Accounting, production, and land systems feed a cross-reference hub on Snowflake, extended over a commercial MDM product, producing Well Master and Property Master views that power reporting">
+          <defs>
+            <marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker>
+            <marker id="arg" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#93A9BD"/></marker>
+          </defs>
+
+          <text x="16" y="24" class="svg-label">Source systems</text>
+          <rect x="16" y="32" width="104" height="32" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="68" y="52" text-anchor="middle" class="svg-box-text">Accounting</text>
+          <rect x="16" y="74" width="104" height="32" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="68" y="94" text-anchor="middle" class="svg-box-text">Production</text>
+          <rect x="16" y="116" width="104" height="32" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="68" y="136" text-anchor="middle" class="svg-box-text">Land</text>
+
+          <path d="M120 48 H150 Q160 48 160 62 V76 Q160 86 170 86 H186" fill="none" stroke="#93A9BD" stroke-width="1.5" marker-end="url(#arg)"/>
+          <path d="M120 90 H186" fill="none" stroke="#93A9BD" stroke-width="1.5" marker-end="url(#arg)"/>
+          <path d="M120 132 H150 Q160 132 160 118 V104 Q160 94 170 94 H186" fill="none" stroke="#93A9BD" stroke-width="1.5" marker-end="url(#arg)"/>
+
+          <rect x="190" y="60" width="130" height="60" rx="6" fill="#12314F"/>
+          <text x="255" y="86" text-anchor="middle" class="svg-white-text">Xref hub</text>
+          <text x="255" y="104" text-anchor="middle" class="svg-white-text-sm">Snowflake</text>
+
+          <rect x="190" y="132" width="130" height="30" rx="4" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="255" y="151" text-anchor="middle" class="svg-amber-text">MDM extension layer</text>
+          <path d="M255 132 V120" fill="none" stroke="#E2A63C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <path d="M320 78 H354" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+          <path d="M320 102 H354" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="358" y="60" width="118" height="32" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="417" y="80" text-anchor="middle" class="svg-box-text">Well Master</text>
+          <rect x="358" y="98" width="118" height="32" rx="4" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="417" y="118" text-anchor="middle" class="svg-box-text">Property Master</text>
+
+          <path d="M476 76 H504 Q514 76 514 86 V88" fill="none" stroke="#E9930C" stroke-width="1.5"/>
+          <path d="M476 114 H504 Q514 114 514 104 V102" fill="none" stroke="#E9930C" stroke-width="1.5" marker-end="url(#arw)"/>
+
+          <rect x="514" y="76" width="110" height="38" rx="4" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="569" y="99" text-anchor="middle" class="svg-amber-text">Reporting</text>
+        </svg>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>Downstream teams gained a unified well and property view that every subsystem — production variance, land, data quality, finance reporting — could join to without re-deriving mappings. The Xref foundations became load-bearing infrastructure for the rest of the reporting estate, and property-level reporting finally agreed with itself across systems.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li>Snowflake</li><li>EnerHub</li><li>SQL</li><li>Master data management</li><li>Reporting views</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/journal-entry-automation.html">← Previous: Journal entry automation</a>
+        <a href="/work/snowflake-migration.html">Next: Warehouse migration →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operator-to-Operator Warehouse Migration — Ammar Khan</title>
+  <meta name="description" content="A full Snowflake environment migration during a corporate transition — data and object layers, environment readiness, structured release coordination.">
+  <link rel="canonical" href="https://ammarkhanupwork.pages.dev/work/snowflake-migration.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ammarkhanupwork.pages.dev/work/snowflake-migration.html">
+  <meta property="og:title" content="Operator-to-Operator Warehouse Migration — Ammar Khan">
+  <meta property="og:description" content="A full Snowflake environment migration during a corporate transition — data and object layers, structured release coordination.">
+  <meta property="og:image" content="https://ammarkhanupwork.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · Warehouse · Cloud</p>
+        <h1>Operator-to-operator warehouse migration</h1>
+        <p class="lede">Moving a full Snowflake environment between operators during a corporate transition — without breaking the reporting people depend on.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>A corporate transition meant an entire Snowflake environment — data, objects, integrations, and the reporting built on top — had to move from one operator's estate to another's. Migrations like this fail quietly: an object deployed out of order, a permission missed, a view compiled against a table that hasn't landed yet. The business still needed its reports every morning while the ground moved underneath them.</p>
+
+      <h2>Approach</h2>
+      <p>I supported the migration by deploying changes across both the data layers and the object layers of the Snowflake estate, working within a structured release process rather than ad-hoc copying. Each release was prepared as a promotable unit: scripted, reviewed, sequenced against its dependencies, and verified after deployment.</p>
+      <p>Alongside deployment work, I contributed to environment readiness — making sure the receiving environment's structure, access model, and integrations were prepared before objects arrived — and to release coordination across the teams involved in the transition, keeping implementation aligned with the overall cutover plan.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+        <svg viewBox="0 0 640 170" role="img" aria-label="A source Snowflake environment migrates through a structured release pipeline of scripted, sequenced, verified deployments into the target operator environment, covering data, object, and access layers">
+          <defs>
+            <marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker>
+          </defs>
+
+          <text x="24" y="30" class="svg-label">Source environment</text>
+          <rect x="24" y="38" width="150" height="94" rx="6" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <rect x="38" y="50" width="122" height="22" rx="4" fill="#FFFFFF" stroke="#A8BDD0"/>
+          <text x="99" y="65" text-anchor="middle" class="svg-box-text-sm">Data layer</text>
+          <rect x="38" y="78" width="122" height="22" rx="4" fill="#FFFFFF" stroke="#A8BDD0"/>
+          <text x="99" y="93" text-anchor="middle" class="svg-box-text-sm">Object layer</text>
+          <rect x="38" y="106" width="122" height="22" rx="4" fill="#FFFFFF" stroke="#A8BDD0"/>
+          <text x="99" y="121" text-anchor="middle" class="svg-box-text-sm">Access &amp; integrations</text>
+
+          <path d="M174 85 H216" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+
+          <text x="222" y="30" class="svg-label">Structured releases</text>
+          <rect x="220" y="38" width="196" height="94" rx="6" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="318" y="64" text-anchor="middle" class="svg-amber-text">Scripted · reviewed</text>
+          <text x="318" y="86" text-anchor="middle" class="svg-amber-text">Dependency-sequenced</text>
+          <text x="318" y="108" text-anchor="middle" class="svg-amber-text">Verified after deploy</text>
+
+          <path d="M416 85 H458" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+
+          <text x="466" y="30" class="svg-label">Target environment</text>
+          <rect x="462" y="38" width="154" height="94" rx="6" fill="#12314F"/>
+          <text x="539" y="80" text-anchor="middle" class="svg-white-text">Snowflake</text>
+          <text x="539" y="100" text-anchor="middle" class="svg-white-text-sm">new operator estate</text>
+
+          <circle cx="150" cy="156" r="3" fill="#4A6D8C"/><text x="160" y="160" class="svg-label">Prepare</text>
+          <path d="M220 156 H280" stroke="#C6D3DF" stroke-width="1.5"/>
+          <circle cx="288" cy="156" r="3" fill="#4A6D8C"/><text x="298" y="160" class="svg-label">Promote</text>
+          <path d="M360 156 H420" stroke="#C6D3DF" stroke-width="1.5"/>
+          <circle cx="428" cy="156" r="3" fill="#E9930C"/><text x="438" y="160" class="svg-label">Verify &amp; cut over</text>
+        </svg>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>The environment moved as a sequence of controlled, verifiable releases rather than a risky big-bang copy. Reporting continuity was preserved through the transition, and the receiving operator inherited a Snowflake estate whose objects had been promoted in a documented, repeatable way — not reconstructed from tribal knowledge after the fact.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li>Snowflake</li><li>SQL</li><li>Deployment scripts</li><li>Release management</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/master-data-xref.html">← Previous: Master data &amp; Xref architecture</a>
+        <a href="/work/land-data-stack.html">Next: Land data stack →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
