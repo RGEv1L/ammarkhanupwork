@@ -256,6 +256,33 @@ h3 { font-size: 18px; margin: 0 0 6px; }
 .cert-id { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--ink-2); }
 .cred-grid .card p { margin-bottom: 6px; }
 .cred-footnote { font-size: 13px; color: var(--ink-2); margin-top: 20px; }
+.show-cert { align-self: center; margin-top: auto; }
+.cred-grid .card { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+.cred-grid .card .show-cert { margin-top: 14px; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(18, 49, 79, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img {
+  max-width: min(960px, 94vw);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.lightbox-hint { color: #B9CBDC; font-size: 13px; margin: 12px 0 0; }
 .section h2 { margin-top: 26px; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }

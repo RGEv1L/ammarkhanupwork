@@ -18,6 +18,39 @@
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
 
+  /* Credentials: certificate lightbox (vanilla, keyboard-dismissable). */
+  var showBtns = document.querySelectorAll(".show-cert[data-cert]");
+  if (showBtns.length) {
+    var overlay = document.createElement("div");
+    overlay.className = "lightbox";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.hidden = true;
+    overlay.innerHTML = '<img alt=""><p class="lightbox-hint">Click anywhere or press Esc to close</p>';
+    document.body.appendChild(overlay);
+    var overlayImg = overlay.querySelector("img");
+    var lastFocus = null;
+
+    function closeBox() {
+      overlay.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    }
+    overlay.addEventListener("click", closeBox);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !overlay.hidden) closeBox();
+    });
+    showBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        lastFocus = btn;
+        overlayImg.src = btn.getAttribute("data-cert");
+        overlayImg.alt = btn.getAttribute("data-alt") || "Certificate";
+        overlay.hidden = false;
+        document.body.style.overflow = "hidden";
+      });
+    });
+  }
+
   /* Work index: capability filter chips. */
   var chips = document.querySelectorAll(".chip[data-filter]");
   if (chips.length) {
