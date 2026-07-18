@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amourarchx.pages.dev/sitemap.xml
+Sitemap: https://armourarchx.pages.dev/sitemap.xml
