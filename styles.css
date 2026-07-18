@@ -294,6 +294,12 @@ h3 { font-size: 18px; margin: 0 0 6px; }
   border-radius: 4px;
   padding: 2px 8px;
 }
+.tags li.tag-client {
+  background: var(--fill-amb);
+  border-color: var(--amber);
+  color: #854F0B;
+  font-weight: 600;
+}
 
 /* ---------- Filter chips (work index) ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; }

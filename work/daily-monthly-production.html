@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily &amp; monthly production reporting — Ammar Khan</title>
+  <meta name="description" content="Daily ops numbers and monthly accounting numbers that never agreed. Daily &amp; monthly production reporting — case study.">
+  <link rel="canonical" href="https://amourarchx.pages.dev/work/daily-monthly-production.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://amourarchx.pages.dev/work/daily-monthly-production.html">
+  <meta property="og:title" content="Daily &amp; monthly production reporting — Ammar Khan">
+  <meta property="og:description" content="Daily ops numbers and monthly accounting numbers that never agreed. Daily &amp; monthly production reporting — case study.">
+  <meta property="og:image" content="https://amourarchx.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/credentials.html">Credentials</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · US natural gas operator</p>
+        <h1>Daily &amp; monthly production reporting</h1>
+        <p class="lede">Daily ops numbers and monthly accounting numbers that never agreed.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>Daily ops numbers and monthly accounting numbers that never agreed.</p>
+
+      <h2>Approach</h2>
+      <p>Developed the daily and monthly production reporting suite for a US operator based on the ProCount production accounting system - the operational heartbeat reports that production and management teams open every morning and every close. Built on the governed Snowflake layer so daily operational numbers and monthly accounting numbers reconcile by construction rather than by month-end firefighting.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+          <svg viewBox="0 0 690 140" role="img" aria-label="Flow: ProCount to Governed Snowflake layer to Daily &amp; monthly reports">
+          <defs><marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker></defs>
+          <rect x="16" y="40" width="190" height="56" rx="6" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="111" y="63" text-anchor="middle" class="svg-box-text">ProCount</text>
+          <text x="111" y="82" text-anchor="middle" class="svg-box-text-sm">production accounting</text>
+          <path d="M210 68 H242" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+          <rect x="248" y="40" width="190" height="56" rx="6" fill="#12314F" stroke="#12314F"/>
+          <text x="343" y="63" text-anchor="middle" class="svg-white-text">Governed Snowflake layer</text>
+          <text x="343" y="82" text-anchor="middle" class="svg-white-text-sm">one lineage</text>
+          <path d="M442 68 H474" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+          <rect x="480" y="40" width="190" height="56" rx="6" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="575" y="63" text-anchor="middle" class="svg-amber-text">Daily &amp; monthly reports</text>
+          <text x="575" y="82" text-anchor="middle" class="svg-box-text-sm">two cadences, zero surprises</text>
+          </svg>
+      </div>
+
+      <h2>Daily and monthly must agree</h2>
+      <p>The oldest fight in production reporting: the daily number ops saw versus the monthly number accounting booked. Building both from the same governed foundation, with allocation logic applied consistently, retires that fight - one lineage, two cadences, zero surprises.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li class="tag-client">US natural gas operator</li><li>Snowflake</li><li>SQL</li><li>Business Intelligence</li><li>Oil &amp; Gas</li><li>Data Engineering</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/unified-reporting-model.html">← Previous: Unified reporting model — five sources</a>
+        <a href="/work/journal-entry-automation.html">Next: AI journal entry automation →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

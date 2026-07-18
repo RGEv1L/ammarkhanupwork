@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-stream data intake into SAP — Ammar Khan</title>
+  <meta name="description" content="Brittle manual data handling feeding a global producer's SAP. Multi-stream data intake into SAP — case study.">
+  <link rel="canonical" href="https://amourarchx.pages.dev/work/sap-intake-modernization.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://amourarchx.pages.dev/work/sap-intake-modernization.html">
+  <meta property="og:title" content="Multi-stream data intake into SAP — Ammar Khan">
+  <meta property="og:description" content="Brittle manual data handling feeding a global producer's SAP. Multi-stream data intake into SAP — case study.">
+  <meta property="og:image" content="https://amourarchx.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Ammar Khan</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/credentials.html">Credentials</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn" href="/contact.html">Let's catch up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="section-label">Case study · Global chemicals &amp; energy producer</p>
+        <h1>Multi-stream data intake into SAP</h1>
+        <p class="lede">Brittle manual data handling feeding a global producer's SAP.</p>
+      </div>
+    </div>
+
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>Brittle manual data handling feeding a global producer's SAP.</p>
+
+      <h2>Approach</h2>
+      <p>Modernized the data intake workflow for a global chemicals and energy producer running a legacy drilling-software estate: built secure processes to ingest data from multiple streams, then process, transform, and load it into SAP and SQL systems using Azure Data Factory, Azure SQL, and Microsoft Fabric. Replaced brittle manual handling with governed, repeatable pipelines - the unglamorous work that determines whether an ERP can be trusted.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-panel">
+          <svg viewBox="0 0 690 140" role="img" aria-label="Flow: Multi-stream sources to ADF · SQL · Fabric to SAP">
+          <defs><marker id="arw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#E9930C"/></marker></defs>
+          <rect x="16" y="40" width="190" height="56" rx="6" fill="#F1F6FA" stroke="#A8BDD0"/>
+          <text x="111" y="63" text-anchor="middle" class="svg-box-text">Multi-stream sources</text>
+          <text x="111" y="82" text-anchor="middle" class="svg-box-text-sm">drilling estate</text>
+          <path d="M210 68 H242" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+          <rect x="248" y="40" width="190" height="56" rx="6" fill="#12314F" stroke="#12314F"/>
+          <text x="343" y="63" text-anchor="middle" class="svg-white-text">ADF · SQL · Fabric</text>
+          <text x="343" y="82" text-anchor="middle" class="svg-white-text-sm">validate &amp; transform</text>
+          <path d="M442 68 H474" fill="none" stroke="#E9930C" stroke-width="2" marker-end="url(#arw)"/>
+          <rect x="480" y="40" width="190" height="56" rx="6" fill="#FDF3E1" stroke="#E2A63C"/>
+          <text x="575" y="63" text-anchor="middle" class="svg-amber-text">SAP</text>
+          <text x="575" y="82" text-anchor="middle" class="svg-box-text-sm">governed intake</text>
+          </svg>
+      </div>
+
+      <h2>The intake layer is the ERP's immune system</h2>
+      <p>Everything downstream inherits the quality of what enters. This modernization put validation, security, and repeatability at the point of intake - multiple source streams, one governed path into SAP - so data problems get caught at the door instead of discovered in the general ledger.</p>
+
+      <h2>Stack</h2>
+      <ul class="tags"><li class="tag-client">Global chemicals &amp; energy producer</li><li>Azure Data Factory</li><li>SQL</li><li>Microsoft Fabric</li><li>Data Integration</li><li>SAP</li></ul>
+
+      <p><a class="btn" href="/contact.html">Have a similar problem? Let's catch up →</a></p>
+
+      <div class="pn-links">
+        <a href="/work/land-reporting-suite.html">← Previous: Land reporting suite</a>
+        <a href="/work/ai-financial-reports.html">Next: AI-assisted financial reports →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Ammar Khan · Principal Architect at a US energy data consultancy</p>
+      <nav aria-label="Footer">
+        <a href="https://www.upwork.com/freelancers/~014bf2379200afbee2" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/akhaan/" rel="noopener">LinkedIn</a>
+        <a data-email-link href="/contact.html">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
