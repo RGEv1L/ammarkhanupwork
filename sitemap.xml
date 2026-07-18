@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://akhan-arcx.pages.dev/</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/journal-entry-automation.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/master-data-xref.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/snowflake-migration.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/land-data-stack.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/wellbore-schematics.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/work/ai-knowledge-platform.html</loc></url>
-  <url><loc>https://akhan-arcx.pages.dev/contact.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/journal-entry-automation.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/master-data-xref.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/snowflake-migration.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/land-data-stack.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/wellbore-schematics.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/work/ai-knowledge-platform.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/credentials.html</loc></url>
+  <url><loc>https://amourarchx.pages.dev/contact.html</loc></url>
 </urlset>

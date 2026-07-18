@@ -243,6 +243,21 @@ h3 { font-size: 18px; margin: 0 0 6px; }
 .card p { margin: 0 0 10px; font-size: 14px; color: var(--ink-2); }
 .card .cta { margin-top: auto; font-size: 14px; }
 
+.card > img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Credentials page */
+.cert-top { border-color: var(--amber); }
+.cert-id { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--ink-2); }
+.cred-grid .card p { margin-bottom: 6px; }
+.cred-footnote { font-size: 13px; color: var(--ink-2); margin-top: 20px; }
+.section h2 { margin-top: 26px; }
+
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
 .tags li {
   font-size: 12px;
