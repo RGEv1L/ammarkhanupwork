@@ -241,7 +241,9 @@ h3 { font-size: 18px; margin: 0 0 6px; }
 .card h3 { font-size: 17px; }
 .card .problem { font-weight: 600; font-size: 14px; margin: 0 0 6px; }
 .card p { margin: 0 0 10px; font-size: 14px; color: var(--ink-2); }
-.card .cta { margin-top: 0; font-size: 14px; }
+.card .cta { margin-top: 0; font-size: 14px; align-self: center; }
+/* Anchor the tag block + CTA to the card bottom so all cards align */
+.card > .tags { margin-top: auto; padding-top: 10px; }
 
 .card > img {
   width: 100%;
