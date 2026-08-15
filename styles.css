@@ -103,7 +103,12 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.4px;
   color: var(--navy);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
 }
+.brand svg { flex: 0 0 auto; }
+.brand .brand-x { color: var(--amber-tx); }
 .brand:hover { text-decoration: none; }
 .site-nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .site-nav a {
